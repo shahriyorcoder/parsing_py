@@ -3,30 +3,35 @@ import requests
 
 #  STADION UZ 
 ######################################################
-# page = requests.get('https://stadion.uz/')
-# data = BeautifulSoup(page.content,'html.parser')
-# komand = []
-
-# serch = data.find(id='online_tablo').find('ul')
-# data = serch.findChildren('li',recursive=False)
-# for s in data:
-#     if s  != None:
-#         for f in s.findChildren('ul'):
-#             komand.append([ f.find('li',id='online_tablo_day').text, f.find('li',id='online_tablo_team1').text,f.find('li',id='online_tablo_result').text,f.find('li',id='online_tablo_team2').text])
-# setdata = str(input('Komanda kirit : ' ))
-# for i in komand:
-#     pass
-#     if setdata == str(i[3]):
-#         print(i[0])
-#         print(i[1].strip() , i[2].strip() , i[3].strip())
-#         break
-#     elif  str(i[1]).endswith(setdata) :
-#         print(i[0])
-#         print(i[1].strip() , i[2].strip() , i[3].strip())
-#         continue
-#     else:
-#         print('Komanda topilmadi')
-#         break
+page = requests.get('https://stadion.uz/')
+data = BeautifulSoup(page.content,'html.parser')
+komand = []
+check = True
+serch = data.find(id='online_tablo').find('ul')
+data = serch.findChildren('li',recursive=False)
+for s in data:
+    if s  != None:
+        for f in s.findChildren('ul'):
+            komand.append([ f.find('li',id='online_tablo_day').text, f.find('li',id='online_tablo_team1').text,f.find('li',id='online_tablo_result').text,f.find('li',id='online_tablo_team2').text])
+setdata = str(input('Komanda kirit : ' ))
+for i in komand:
+    pass
+    if setdata == str(i[3]):
+        print()
+        print(i[0])
+        print(i[1].strip() , i[2].strip() , i[3].strip())
+        print()
+        check=False
+        break
+    elif  str(i[1]).endswith(setdata) :
+        print()
+        print(i[0])
+        print(i[1].strip() , i[2].strip() , i[3].strip())
+        print()
+        check=False
+        break
+if check:
+    print('Komanda topilmadi')
 ######################################################
 
 
