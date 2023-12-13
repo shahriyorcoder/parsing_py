@@ -1,7 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
+# import requests
+# from bs4 import BeautifulSoup
 
-url = requests.get('https://www.google.com/search?q=laliga+table&rlz=1C1IXYC_ruUZ1083UZ1083&oq=laliga+&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIGCAAQRRg5MgwIARAjGCcYgAQYigUyBwgCEC4YgAQyBwgDEC4YgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQkxNDQzNWowajSoAgCwAgA&sourceid=chrome&ie=UTF-8#sie=lg;/g/11khrmf0s3;2;/m/09gqx;st;fp;1;;;')
-data = BeautifulSoup(url.content,'html.parser')
-
-print(data)
+# url = requests.get('https://www.theguardian.com/football/premierleague/table')
+# data = BeautifulSoup(url.content,'html.parser')
+# data1 = data.find('table',class_='table table--football table--league-table table--responsive-font table--striped')
+# data1 = data1.find('tbody').find_all('tr')
+# data.findChild()
+# for x in data1:
+#     print(x.contents[0])
+# # print(data1)
