@@ -60,7 +60,10 @@ import requests
 #         )
 #     if page_size==count:
 #         break
-# print(olx_data)
+# # print(olx_data)
+# for x in olx_data:
+#     print(x['img'])
+
 # print(count)
 ################## ####################################
 
