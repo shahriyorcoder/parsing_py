@@ -28,6 +28,7 @@ driver.get('https://www.olx.uz/adding/')
 
 driver.find_element(By.NAME,'username').send_keys('mahsudaliyevshahriyor398@gmail.com')
 driver.find_element(By.NAME,'password').send_keys('Devoloper_0279')
+
 driver.find_element(By.CLASS_NAME,'css-ypypxs').click()
 time.sleep(5)
 driver.find_element(By.CLASS_NAME,'css-v49bm8').send_keys('Iphone x OLED Multi-Touch displayHDR display2436')
