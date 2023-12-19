@@ -14,3 +14,16 @@
 # import os
 # os.system('shutdown /s /t 1')
 
+from bs4 import BeautifulSoup
+import requests
+
+url = requests.get('https://www.theguardian.com/football/premierleague/table')
+data = BeautifulSoup(url.content,'html.parser')
+data.findChild('')
+
+data1 = data.find('div',class_='u-cf').div.table.tbody.findChildren('tr',recursive=False)
+for x in data1:
+    # print(x.findChild('td',{'class':'table-column--sub'}))
+    print(x.findChild('td',{'class':'table-column--main'}).a.text.strip())
+    # print(x)
+    
