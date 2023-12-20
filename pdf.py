@@ -3,7 +3,6 @@ import json
 
 reader = PyPDF2.PdfReader('mpdf.pdf')
 
-
 fanlar = reader.pages[0].extract_text()[reader.pages[0].extract_text().find("Test topshirish fanlari"):reader.pages[0].extract_text().find("Test sinovi topshirish hududi va hududga kelish vaqti")].split('Test topshirish fanlari:')[1].splitlines()
 
 
